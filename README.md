@@ -19,5 +19,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 express task manager is build with shadcn component library and bootstrapped with typescript, next js and tailwind
 
 <div align="center">
-    <img src="./public/screen.png" width="400px"</img> 
+    <img src="./public/screen.png"</img> 
 </div>
