@@ -1,3 +1,4 @@
+import { Label } from '@/components/__component-library/label';
 import type { Config } from "tailwindcss"
 
 const config = {
@@ -7,7 +8,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -52,6 +53,10 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "label-green": "hsl(var(--label-green))",
+        "label-blue": "hsl(var(--label-blue))",
+        "label-orange": "hsl(var(--label-orange))",
+        "label-muted": "hsl(var(--label-muted))",
       },
       borderRadius: {
         lg: "var(--radius)",
