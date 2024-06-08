@@ -1,4 +1,4 @@
-import { Label } from '@/components/__component-library/label';
+import { Label } from '@/components/_ui/label';
 import type { Config } from "tailwindcss"
 
 const config = {
