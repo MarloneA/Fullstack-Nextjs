@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "../components/theme-provider";
+import { ThemeProvider } from "../components/app-providers/ThemeProvider/theme-provider";
+import { ReactQueryClientProvider } from "../components/app-providers/ReactQueryClientProvider/index";
+import { AuthContext } from "../context/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,17 +17,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const checkCookieExists = (): boolean => {
+  //   if (
+  //     document.cookie
+  //       .split(";")
+  //       .some((item) => item.trim().startsWith("rally-session="))
+  //   ) {
+  //     return true;
+  //   }
+  //   return false;
+  // };
+
+  const hasCookie = true;
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        {" "}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          {/* <AuthContext.Provider
+            value={{
+              hasCookie,
+              user: {},
+            }}
+          > */}
+          <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+          {/* </AuthContext.Provider> */}
         </ThemeProvider>
       </body>
     </html>
