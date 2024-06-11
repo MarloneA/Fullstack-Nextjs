@@ -28,14 +28,14 @@ async function getTasks() {
 export default async function TaskPage() {
   const tasks = await getTasks();
   return (
-    <div className="md:flex flex-col flex-1 space-y-8 hidden p-8 h-full">
-      <div className="flex justify-between bg-background w-full">
+    <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+      <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-10">
         <NavigationComponent />
-        <div className="flex items-center space-x-2">
-          <CreateTaskDialog />
-        </div>
-      </div>
-      <DataTable data={tasks} columns={columns} />
+        <CreateTaskDialog />
+      </header>
+      <main className="p-10">
+        <DataTable data={tasks} columns={columns} />
+      </main>
     </div>
   );
 }

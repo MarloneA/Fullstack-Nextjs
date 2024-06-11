@@ -14,7 +14,7 @@ export default function LandingPage() {
         <div className="flex justify-center items-center space-x-4 py-4 md:pb-10 w-full">
           <Link
             className="inline-flex justify-center items-center bg-primary hover:bg-primary/90 disabled:opacity-50 shadow px-4 py-2 rounded-md h-9 font-medium text-primary-foreground text-sm whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none"
-            href="/login"
+            href="/dashboard"
           >
             Get Started
           </Link>
