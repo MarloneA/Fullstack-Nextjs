@@ -2,14 +2,36 @@
 
 import React from "react";
 import Link from "next/link";
+import { TypewriterEffectSmooth } from "@/components/_ui/typewriter-effect";
 
 export default function LandingPage() {
+  const words = [
+    {
+      text: "Keep",
+    },
+    {
+      text: "track of",
+    },
+    {
+      text: "the",
+    },
+    {
+      text: "important",
+      className: "text-primary dark:text-primary",
+    },
+    {
+      text: "stuff.",
+    },
+  ];
+
   return (
     <div className="flex flex-col justify-center items-center w-full min-h-screen">
       <section className="flex flex-col items-center gap-2 mx-auto py-8 md:py-12 lg:py-24 md:pb-8 lg:pb-20 max-w-[980px]">
-        <h1 className="font-bold text-3xl text-center md:text-6xl leading-tight lg:leading-[1.1] tracking-tighter">
+        {/* <h1 className="font-bold text-3xl text-center md:text-6xl leading-tight lg:leading-[1.1] tracking-tighter">
           Keep track of the important stuff
-        </h1>
+        </h1> */}
+
+        <TypewriterEffectSmooth words={words} />
 
         <div className="flex justify-center items-center space-x-4 py-4 md:pb-10 w-full">
           <Link
